@@ -1,0 +1,17 @@
+{% extends 'upload/base.html' %}
+
+{% block title %}Upload Files{% endblock %}
+
+{% block content %}
+<h1>Upload Files</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="files" multiple>
+    {% if form.errors %}
+        <div class="alert alert-danger">
+            <strong>Error:</strong> Please correct the errors below.
+        </div>
+    {% endif %}
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+{% endblock %}

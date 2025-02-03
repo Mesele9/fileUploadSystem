@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vqtgn5sf*nku#e$^%y#1&)fvg35hb(k^!q_c*-l-zqj%+by4qy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.10.250']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'upload',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'printfilesystem.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'upload/templates'],  
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
