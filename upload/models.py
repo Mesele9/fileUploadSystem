@@ -4,9 +4,9 @@ from datetime import date
 
 def upload_to(instance, filename):
     # Create a folder structure like uploads20251025
-    today = date.today()
-    folder = f"{today.year}-{today.month:02d}-{today.day:02d}"
-    #folder = f"{today.day:02d}-{today.month:02d}-{str(today.year)[-4:]}"
+    #today = date.today()
+    folder = date.today().strftime("%Y%m%d")
+   
     return os.path.join('uploads', folder, filename)
 
 class File(models.Model):

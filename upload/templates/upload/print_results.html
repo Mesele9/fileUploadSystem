@@ -1,0 +1,15 @@
+{% extends 'upload/base.html' %}
+
+{% block title %}Print Result{% endblock %}
+
+{% block content %}
+<div class="card shadow">
+    <div class="card-header bg-primary text-white">
+        <h2 class="card-title mb-0">Print Status</h2>
+    </div>
+    <div class="card-body">
+        <div class="alert alert-info">{{ message }}</div>
+        <a href="{% url 'dashboard' %}" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</div>
+{% endblock %}
